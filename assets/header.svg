@@ -1,96 +1,50 @@
 <svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
-        /* CSS-Variablen für Light & Dark Mode */
-        :root {
-            --bg-color: #f6f8fa; /* GitHub Light Mode Hintergrund */
-            --text-color: #24292e;
-            --subtext-color: #586069;
-            --accent-gradient-start: #4F46E5; /* Indigo */
-            --accent-gradient-end: #06B6D4; /* Cyan */
-            --icon-color: #ffffff;
-            --glow-color: #4F46E5;
-            --path-color: #d1d5db;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #0d1117; /* GitHub Dark Mode Hintergrund */
-                --text-color: #c9d1d9;
-                --subtext-color: #8b949e;
-                --accent-gradient-start: #06B6D4; /* Cyan */
-                --accent-gradient-end: #4F46E5; /* Indigo */
-                --glow-color: #06B6D4;
-                --path-color: #21262d;
-            }
-        }
-
-        /* Schriften & Basis-Styling */
-        .header { font: 600 32px 'Segoe UI', 'Inter', sans-serif; fill: var(--text-color); }
-        .subheader { font: 400 16px 'Segoe UI', 'Inter', sans-serif; fill: var(--subtext-color); }
-        
-        /* Animationen */
+        .header { font: 600 32px 'Segoe UI', 'Inter', sans-serif; }
+        .subheader { font: 400 16px 'Segoe UI', 'Inter', sans-serif; }
         @keyframes draw { to { stroke-dashoffset: 0; } }
         @keyframes pulse-glow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
         @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Animations-Anwendung */
         .header, .subheader { animation: fade-in 1.5s ease-out; }
-        .flow-path {
-            stroke-dasharray: 600;
-            stroke-dashoffset: 600;
-            animation: draw 2s ease-out forwards;
-            animation-delay: 0.5s;
-        }
+        .flow-path { stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 2s ease-out forwards 0.5s; }
         .node-glow { animation: pulse-glow 3s infinite ease-in-out; }
     </style>
-
-    <rect width="100%" height="100%" fill="var(--bg-color)" />
-
+    <rect width="100%" height="100%" fill="#f6f8fa" />
     <g transform="translate(60, 60)">
-        <text class="header">Hi, ich bin Jan 👋</text>
-        <text y="30" class="subheader">Ich verwandle komplexe Prozesse in elegante Automations-Flows.</text>
+        <text class="header" fill="#24292e">Hi, ich bin Jan 👋</text>
+        <text y="30" class="subheader" fill="#586069">Ich verwandle komplexe Prozesse in elegante Automations-Flows.</text>
     </g>
-    
     <defs>
-        <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="var(--accent-gradient-start)" />
-            <stop offset="100%" stop-color="var(--accent-gradient-end)" />
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4F46E5" />
+            <stop offset="100%" stop-color="#06B6D4" />
         </linearGradient>
-        <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="8" result="coloredBlur" in="SourceGraphic" />
-            <feMerge>
-                <feMergeNode in="coloredBlur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
+        <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" in="SourceGraphic" />
         </filter>
     </defs>
-
     <g transform="translate(80, 150)">
-        <path class="flow-path" d="M 50,50 C 250,0 450,100 650,50 S 950,0 1050,50" stroke="var(--path-color)" stroke-width="4" stroke-linecap="round"/>
-        
+        <path class="flow-path" d="M 50,50 C 250,0 450,100 650,50 S 950,0 1050,50" stroke="#d1d5db" stroke-width="4" stroke-linecap="round"/>
         <g transform="translate(50, 50)" style="animation: fade-in 1s ease-out 1.5s backwards;">
-            <circle r="25" fill="url(#accent-gradient)" />
-            <circle r="30" fill="var(--glow-color)" opacity="0.5" filter="url(#glow-filter)" class="node-glow" style="animation-delay: 1s;" />
-            <path d="M -8,-10 L -8,10 L 10,0 Z" fill="var(--icon-color)" transform="translate(2,0)" />
+            <circle r="30" fill="#4F46E5" class="node-glow" style="animation-delay: 1s;" filter="url(#glow1)" />
+            <circle r="25" fill="url(#grad1)" />
+            <path d="M -8,-10 L -8,10 L 10,0 Z" fill="#ffffff" transform="translate(2,0)" />
         </g>
-        
         <g transform="translate(550, 50)" style="animation: fade-in 1s ease-out 2.5s backwards;">
-            <circle r="25" fill="url(#accent-gradient)" />
-            <circle r="30" fill="var(--glow-color)" opacity="0.5" filter="url(#glow-filter)" class="node-glow" style="animation-delay: 2s;" />
-            <path d="M -10,4 L -5,10 L 5,-10 L 10,-4" stroke="var(--icon-color)" stroke-width="3" stroke-linecap="round" fill="none" />
-            <path d="M -1,13 L 1,-13" stroke="var(--icon-color)" stroke-width="2.5" fill="none" opacity="0.6"/>
+            <circle r="30" fill="#4F46E5" class="node-glow" style="animation-delay: 2s;" filter="url(#glow1)" />
+            <circle r="25" fill="url(#grad1)" />
+            <path d="M -10,4 L -5,10 L 5,-10 L 10,-4" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none" />
+            <path d="M -1,13 L 1,-13" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.6"/>
         </g>
-
         <g transform="translate(1050, 50)" style="animation: fade-in 1s ease-out 3.5s backwards;">
-            <circle r="25" fill="url(#accent-gradient)" />
-            <circle r="30" fill="var(--glow-color)" opacity="0.5" filter="url(#glow-filter)" class="node-glow" style="animation-delay: 3s;" />
-            <path d="M 0 -12 C 10 -12, 10 12, 0 12 C -10 12, -10 -12, 0 -12 Z M -10 2 H 10 M -10 -5 H 10" stroke="var(--icon-color)" stroke-width="2.5" fill="none"/>
+            <circle r="30" fill="#4F46E5" class="node-glow" style="animation-delay: 3s;" filter="url(#glow1)" />
+            <circle r="25" fill="url(#grad1)" />
+            <path d="M 0 -12 C 10 -12, 10 12, 0 12 C -10 12, -10 -12, 0 -12 Z M -10 2 H 10 M -10 -5 H 10" stroke="#ffffff" stroke-width="2.5" fill="none"/>
         </g>
-        
-        <circle r="5" fill="var(--accent-gradient-start)">
+        <circle r="5" fill="#4F46E5">
              <animateMotion dur="4s" begin="1.5s" repeatCount="indefinite" path="M 50,50 C 250,0 450,100 650,50 S 950,0 1050,50"/>
         </circle>
-        <circle r="5" fill="var(--accent-gradient-end)" opacity="0.8">
+        <circle r="5" fill="#06B6D4" opacity="0.8">
              <animateMotion dur="4s" begin="1.9s" repeatCount="indefinite" path="M 50,50 C 250,0 450,100 650,50 S 950,0 1050,50"/>
         </circle>
     </g>
