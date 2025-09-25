@@ -1,1 +1,83 @@
-<img src="./assets/header-flow.svg" alt="Header: Automation Flow" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Automation flow header">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <!-- Title -->
+  <g transform="translate(40,40)">
+    <text x="0" y="28" font-family="Inter, Arial, sans-serif" font-size="28" fill="#0f172a" font-weight="600">Hi, I’m Jan 👋</text>
+    <text x="0" y="58" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">AI & Automation Specialist — n8n · Notion · pragmatic JavaScript</text>
+  </g>
+
+  <!-- Flow paths -->
+  <g transform="translate(60,110)" stroke="url(#g1)" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- path 1 -->
+    <path id="p1" d="M0,40 C160,0 320,80 480,40" />
+    <!-- path 2 -->
+    <path id="p2" d="M540,40 C700,0 860,80 1020,40" />
+  </g>
+
+  <!-- Nodes -->
+  <g transform="translate(60,110)">
+    <!-- node A -->
+    <g transform="translate(0,40)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="14" fill="#06B6D4"/>
+      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Trigger</text>
+    </g>
+
+    <!-- node B -->
+    <g transform="translate(480,40)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="14" fill="#4F46E5"/>
+      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Transform</text>
+    </g>
+
+    <!-- node C -->
+    <g transform="translate(1020,40)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="14" fill="#06B6D4"/>
+      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Destination</text>
+    </g>
+  </g>
+
+  <!-- moving dots on paths -->
+  <g transform="translate(60,110)" fill="#fff">
+    <g>
+      <circle r="8" fill="#fff" stroke="#06B6D4" stroke-width="2">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="0s">
+          <mpath xlink:href="#p1"/>
+        </animateMotion>
+      </circle>
+      <circle r="6" fill="#4F46E5" opacity="0.9">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="1.2s">
+          <mpath xlink:href="#p1"/>
+        </animateMotion>
+      </circle>
+    </g>
+
+    <g>
+      <circle r="8" fill="#fff" stroke="#4F46E5" stroke-width="2">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="0.6s">
+          <mpath xlink:href="#p2"/>
+        </animateMotion>
+      </circle>
+      <circle r="6" fill="#06B6D4" opacity="0.9">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="1.8s">
+          <mpath xlink:href="#p2"/>
+        </animateMotion>
+      </circle>
+    </g>
+  </g>
+
+  <!-- small caption -->
+  <g transform="translate(60,220)">
+    <text x="0" y="16" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">Scalable automations • n8n flows • Notion knowledge</text>
+  </g>
+</svg>
