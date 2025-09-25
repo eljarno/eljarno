@@ -1,36 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" role="img" aria-label="Robot header">
-  <rect width="100%" height="100%" fill="transparent"/>
+<svg width="1200" height="250" viewBox="0 0 1200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" rx="8" fill="#111827"/>
+    <style>
+        .title { font: 600 32px 'Segoe UI', 'Inter', sans-serif; fill: #E5E7EB; animation: fadeIn 2s ease-in-out; }
+        .subtitle { font: 400 16px 'Segoe UI', 'Inter', sans-serif; fill: #9CA3AF; animation: fadeIn 2s ease-in-out; animation-delay: 0.5s; }
+        .line { stroke: #374151; stroke-width: 2; }
+        .node { fill: #4B5563; }
+        .highlight-line { stroke: #06B6D4; animation: pulse-line 3s infinite; }
+        .highlight-node { fill: #4F46E5; animation: pulse-node 3s infinite; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pulse-line { 0%, 100% { stroke-opacity: 0.2; } 50% { stroke-opacity: 1; } }
+        @keyframes pulse-node { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+    </style>
+    
+    <text x="600" y="60" text-anchor="middle" class="title">Jan — AI & Automation Specialist</text>
+    <text x="600" y="90" text-anchor="middle" class="subtitle">Building intelligent flows with n8n and JavaScript</text>
 
-  <g transform="translate(40,40)">
-    <text x="0" y="28" font-family="Inter, Arial, sans-serif" font-size="28" fill="#0f172a" font-weight="600">Hi, I&apos;m Jan 👋</text>
-    <text x="0" y="58" font-family="Inter, Arial, sans-serif" font-size="14" fill="#334155">Building reliable automations — n8n, Notion &amp; pragmatic JS</text>
-  </g>
+    <g transform="translate(0, 120)">
+        <line x1="200" y1="50" x2="400" y2="20" class="line"/>
+        <line x1="200" y1="50" x2="400" y2="80" class="line highlight-line" style="animation-delay: 0.5s;"/>
+        <line x1="400" y1="20" x2="600" y2="50" class="line highlight-line" style="animation-delay: 1s;"/>
+        <line x1="400" y1="80" x2="600" y2="50" class="line"/>
+        <line x1="600" y1="50" x2="800" y2="20" class="line"/>
+        <line x1="600" y1="50" x2="800" y2="80" class="line highlight-line" style="animation-delay: 1.5s;"/>
+        <line x1="800" y1="20" x2="1000" y2="50" class="line"/>
+        <line x1="800" y1="80" x2="1000" y2="50" class="line highlight-line" style="animation-delay: 2s;"/>
 
-  <!-- simple circuit lines -->
-  <g transform="translate(60,110)" stroke="#cbd5e1" stroke-width="2" fill="none" opacity="0.6">
-    <path d="M400,10 h120 v40 h80"/>
-    <circle cx="620" cy="50" r="6" fill="#e2e8f0"/>
-    <path d="M720,50 h80 v-30 h120" />
-    <path d="M240,50 h120 v-20 h60" />
-  </g>
-
-  <!-- robot (simplified) -->
-  <g transform="translate(820,80)">
-    <rect x="-160" y="0" rx="18" ry="18" width="160" height="120" fill="#06B6D4"/>
-    <g transform="translate(-80,-50)">
-      <rect x="-48" y="0" rx="10" ry="10" width="96" height="64" fill="#fff"/>
-      <circle cx="-20" cy="28" r="8" fill="#0f172a">
-        <animate attributeName="r" values="8;12;8" dur="1.6s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="20" cy="28" r="8" fill="#0f172a">
-        <animate attributeName="r" values="8;12;8" dur="1.8s" begin="0.2s" repeatCount="indefinite"/>
-      </circle>
-      <rect x="-20" y="46" width="40" height="6" rx="3" fill="#94a3b8"/>
+        <circle cx="200" cy="50" r="10" class="node highlight-node"/>
+        <circle cx="400" cy="20" r="10" class="node highlight-node" style="animation-delay: 0.5s;"/>
+        <circle cx="400" cy="80" r="10" class="node"/>
+        <circle cx="600" cy="50" r="15" class="node highlight-node" style="animation-delay: 1s;"/>
+        <circle cx="800" cy="20" r="10" class="node"/>
+        <circle cx="800" cy="80" r="10" class="node highlight-node" style="animation-delay: 1.5s;"/>
+        <circle cx="1000" cy="50" r="10" class="node highlight-node" style="animation-delay: 2s;"/>
     </g>
-  </g>
-
-  <g transform="translate(60,220)">
-    <text x="0" y="16" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">Friendly automations • maintainable flows • practical scripts</text>
-  </g>
 </svg>
