@@ -1,6 +1,6 @@
 <!-- README.md for eljarno -->
 <!-- Animated header with a wave effect -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=200&section=header&text=Hi%2C+I’m+Jan+👋&fontSize=40&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=200&section=header&text=Hi%2C+I’m+Jan&fontSize=40&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35"/>
 
 ### About me
 I’m an **AI & Automation Specialist** focused on scaling internal automation with **n8n**, Notion integrations and pragmatic JavaScript.  
