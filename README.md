@@ -1,6 +1,9 @@
 <!-- README.md for eljarno -->
 <!-- Animated header with a wave effect -->
-<img src="./assets/header-flow.svg" alt="Header: Automation Flow" />
+<p align="center">
+  <img src="./assets/header-flow.svg" alt="Automation flow header" width="100%" />
+</p>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=200&section=header&text=Hi%2C+I’m+Jan+👋&fontSize=40&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35"/>
 
 ### About me
