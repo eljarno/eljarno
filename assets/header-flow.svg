@@ -1,64 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 1200 280" width="100%" role="img" aria-label="Automation flow header">
-  <rect width="100%" height="100%" fill="transparent"/>
-  <g transform="translate(40,40)">
-    <text x="0" y="28" font-family="Inter, Arial, sans-serif" font-size="28" fill="#0f172a" font-weight="600">Hi, I&apos;m Jan 👋</text>
-    <text x="0" y="58" font-family="Inter, Arial, sans-serif" font-size="14" fill="#334155">AI &amp; Automation Specialist — n8n · Notion · pragmatic JavaScript</text>
-  </g>
+<svg width="1200" height="280" viewBox="0 0 1200 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animierter Header, der einen Automations-Flow darstellt">
+    <title>Jan's AI & Automation Flow</title>
+    <style>
+        /* Schriften für ein konsistentes Aussehen */
+        .header-text { font: 600 28px 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; fill: #E5E7EB; }
+        .subheader-text { font: 400 14px 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; fill: #9CA3AF; }
+        .node-text { font: 500 12px 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif; fill: #D1D5DB; }
 
-  <defs>
-    <linearGradient id="g1" x1="0" x2="1">
-      <stop offset="0%" stop-color="#06B6D4"/>
-      <stop offset="100%" stop-color="#4F46E5"/>
-    </linearGradient>
-  </defs>
+        /* Keyframe-Animation für das Zeichnen der Linien */
+        @keyframes draw-line {
+            to { stroke-dashoffset: 0; }
+        }
+        #p1, #p2 {
+            stroke-dasharray: 550; /* Ungefähre Länge des Pfades, muss ggf. angepasst werden */
+            stroke-dashoffset: 550;
+            animation: draw-line 2s ease-out forwards;
+        }
+        /* Zeitliche Staffelung der zweiten Linie */
+        #p2 { animation-delay: 1.5s; }
+    </style>
 
-  <g transform="translate(60,110)" stroke="url(#g1)" stroke-width="3" fill="none" stroke-linecap="round">
-    <path id="p1" d="M0,40 C160,0 320,80 480,40" />
-    <path id="p2" d="M540,40 C700,0 860,80 1020,40" />
-  </g>
+    <rect width="100%" height="100%" rx="8" ry="8" fill="url(#bg-gradient)" />
+    <defs>
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#111827" /> <stop offset="100%" stop-color="#1F2937" />
+        </linearGradient>
+        <linearGradient id="flow-gradient" x1="0" x2="1">
+            <stop offset="0%" stop-color="#06B6D4"/> <stop offset="100%" stop-color="#4F46E5"/> </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
 
-  <g transform="translate(60,110)">
-    <g transform="translate(0,40)">
-      <circle cx="0" cy="0" r="14" fill="#06B6D4"/>
-      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Trigger</text>
+    <g transform="translate(40, 50)">
+        <text class="header-text">Hi, I’m Jan 👋</text>
+        <text y="28" class="subheader-text">AI & Automation Specialist — n8n · Notion · pragmatic JavaScript</text>
     </g>
-    <g transform="translate(480,40)">
-      <circle cx="0" cy="0" r="14" fill="#4F46E5"/>
-      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Transform</text>
+
+    <g transform="translate(60,140)">
+        <path id="p1" d="M0,40 C160,0 320,80 480,40" stroke="url(#flow-gradient)" stroke-width="3" stroke-linecap="round"/>
+        <path id="p2" d="M540,40 C700,0 860,80 1020,40" stroke="url(#flow-gradient)" stroke-width="3" stroke-linecap="round"/>
     </g>
-    <g transform="translate(1020,40)">
-      <circle cx="0" cy="0" r="14" fill="#06B6D4"/>
-      <text x="28" y="6" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Destination</text>
+
+    <g transform="translate(60,140)">
+        <g transform="translate(0,40)">
+            <circle cx="0" cy="0" r="14" fill="#06B6D4" stroke="#111827" stroke-width="4">
+                <animate attributeName="r" values="14;16;14" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <text x="25" y="5" class="node-text">Trigger</text>
+        </g>
+        <g transform="translate(480,40)">
+            <circle cx="0" cy="0" r="14" fill="#4F46E5" stroke="#111827" stroke-width="4">
+                <animate attributeName="r" values="14;16;14" dur="2s" begin="2s" repeatCount="indefinite"/>
+            </circle>
+            <text x="25" y="5" class="node-text">Transform</text>
+        </g>
+        <g transform="translate(1020,40)">
+            <circle cx="0" cy="0" r="14" fill="#06B6D4" stroke="#111827" stroke-width="4">
+                <animate attributeName="r" values="14;16;14" dur="2s" begin="3.5s" repeatCount="indefinite"/>
+            </circle>
+            <text x="25" y="5" class="node-text">Destination</text>
+        </g>
     </g>
-  </g>
 
-  <g transform="translate(60,110)">
-    <circle r="7" fill="#fff" stroke="#06B6D4" stroke-width="2">
-      <animateMotion dur="4s" repeatCount="indefinite">
-        <mpath xlink:href="#p1"/>
-      </animateMotion>
-    </circle>
-    <circle r="6" fill="#4F46E5" opacity="0.95">
-      <animateMotion dur="4s" begin="1.2s" repeatCount="indefinite">
-        <mpath xlink:href="#p1"/>
-      </animateMotion>
-    </circle>
-
-    <circle r="7" fill="#fff" stroke="#4F46E5" stroke-width="2">
-      <animateMotion dur="4s" begin="0.6s" repeatCount="indefinite">
-        <mpath xlink:href="#p2"/>
-      </animateMotion>
-    </circle>
-    <circle r="6" fill="#06B6D4" opacity="0.95">
-      <animateMotion dur="4s" begin="1.8s" repeatCount="indefinite">
-        <mpath xlink:href="#p2"/>
-      </animateMotion>
-    </circle>
-  </g>
-
-  <g transform="translate(60,220)">
-    <text x="0" y="16" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">Scalable automations • n8n flows • Notion knowledge</text>
-  </g>
+    <g transform="translate(60,140)" filter="url(#glow)">
+        <circle r="6" fill="#FFFFFF">
+            <animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M0,40 C160,0 320,80 480,40" />
+            <animate attributeName="r" values="6;2;6" dur="3s" begin="1s" repeatCount="indefinite" />
+        </circle>
+        <circle r="5" fill="#E5E7EB" opacity="0.8">
+            <animateMotion dur="3s" begin="1.8s" repeatCount="indefinite" path="M0,40 C160,0 320,80 480,40" />
+        </circle>
+        <circle r="6" fill="#FFFFFF">
+            <animateMotion dur="3s" begin="2.5s" repeatCount="indefinite" path="M540,40 C700,0 860,80 1020,40" />
+            <animate attributeName="r" values="6;2;6" dur="3s" begin="2.5s" repeatCount="indefinite" />
+        </circle>
+    </g>
 </svg>
