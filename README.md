@@ -1,18 +1,13 @@
 <!-- README.md for eljarno -->
-# Hi, I’m Jan 👋
-> "Automate the tedious — amplify the human."
+<!-- Animated header with a wave effect -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=200&section=header&text=Hi%2C+I’m+Jan+👋&fontSize=40&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35"/>
 
 ### About me
 I’m an **AI & Automation Specialist** focused on scaling internal automation with **n8n**, Notion integrations and pragmatic JavaScript.  
 My passion: building Proof-of-Concepts to validate ideas, and hardening the winners for production.
 
-<!-- Typing animation -->
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Inter&size=24&duration=3000&pause=1000&color=1F2937&width=800&lines=AI+%26+Automation+Specialist;n8n+%26+Notion+Integrations;Builder+of+practical+PoCs)
-
-<!-- Badges & Stats -->
-[![GitHub followers](https://img.shields.io/github/followers/eljarno?label=Follow&style=flat-square)](https://github.com/eljarno)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eljarno&layout=compact&theme=default)](https://github.com/eljarno)
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=eljarno&show_icons=true&count_private=true&theme=default)](https://github.com/eljarno)
+<!-- Typing animation tagline -->
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Inter&size=22&duration=3000&pause=1000&color=06B6D4&width=700&lines=AI+%26+Automation+Specialist;Building+n8n+Flows+%26+Notion+Integrations;Turning+ideas+into+working+PoCs)
 
 ---
 
@@ -22,18 +17,8 @@ My passion: building Proof-of-Concepts to validate ideas, and hardening the winn
 - **Proof-of-Concept frameworks** for automation governance and observability  
 
 ## 🛠 Tools & Tech
-- n8n · Notion · JavaScript · Node.js · Git · Docker  
+- n8n · Notion · JavaScript · Node.js · Docker · Git  
 - Python · REST APIs · Postgres  
-
-## 📌 Pinned projects
-- **automation-playground** — PoCs & patterns for n8n (examples + templates)  
-- **notion-helpers** — Notion integration utilities (scripts & templates)  
-- **playground-js** — small JS utilities & helpers  
-
-## 🎥 Demo / Animated flow
-Here you could add a short demo GIF of an n8n flow (record your screen, export as GIF, place in `assets/`).  
-Example placeholder:  
-![n8n-flow-demo](./assets/n8n-flow-demo.gif)
 
 ---
 
@@ -43,4 +28,5 @@ Example placeholder:
 
 ---
 
-⭐️ From [eljarno](https://github.com/eljarno)
+<!-- Animated footer with wave -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,100:4F46E5&height=120&section=footer"/>
