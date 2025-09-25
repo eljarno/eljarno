@@ -7,15 +7,12 @@
         .node { fill: #4B5563; }
         .highlight-line { stroke: #06B6D4; animation: pulse-line 3s infinite; }
         .highlight-node { fill: #4F46E5; animation: pulse-node 3s infinite; }
-        
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes pulse-line { 0%, 100% { stroke-opacity: 0.2; } 50% { stroke-opacity: 1; } }
         @keyframes pulse-node { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
     </style>
-    
-    <text x="600" y="60" text-anchor="middle" class="title">Jan — AI & Automation Specialist</text>
+    <text x="600" y="60" text-anchor="middle" class="title">Jan — AI &amp; Automation Specialist</text>
     <text x="600" y="90" text-anchor="middle" class="subtitle">Building intelligent flows with n8n and JavaScript</text>
-
     <g transform="translate(0, 120)">
         <line x1="200" y1="50" x2="400" y2="20" class="line"/>
         <line x1="200" y1="50" x2="400" y2="80" class="line highlight-line" style="animation-delay: 0.5s;"/>
@@ -25,7 +22,6 @@
         <line x1="600" y1="50" x2="800" y2="80" class="line highlight-line" style="animation-delay: 1.5s;"/>
         <line x1="800" y1="20" x2="1000" y2="50" class="line"/>
         <line x1="800" y1="80" x2="1000" y2="50" class="line highlight-line" style="animation-delay: 2s;"/>
-
         <circle cx="200" cy="50" r="10" class="node highlight-node"/>
         <circle cx="400" cy="20" r="10" class="node highlight-node" style="animation-delay: 0.5s;"/>
         <circle cx="400" cy="80" r="10" class="node"/>
